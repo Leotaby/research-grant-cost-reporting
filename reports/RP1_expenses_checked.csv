@@ -1,0 +1,67 @@
+expense_id,date,category,description,wp,declared_eur,eligible_eur,ineligible_eur,at_risk_eur,checks
+T-001,2025-01-20,C1,"Consortium meeting, Delft",WP1,774.68,774.68,0.0,0.0,
+T-002,2025-02-19,C1,"Consortium meeting, Grenoble",WP1,731.39,731.39,0.0,0.0,
+T-003,2025-03-21,C1,"Conference travel: APS March Meeting, USA",WP4,2694.57,2694.57,0.0,0.0,
+T-004,2025-04-20,C1,"Consortium meeting, Munich",WP1,635.28,635.28,0.0,0.0,
+T-005,2025-05-20,C1,"Consortium meeting, Delft",WP1,850.31,850.31,0.0,0.0,
+T-006,2025-06-19,C1,"Conference travel: Quantum technology conference, Rotterdam",WP4,1075.68,1075.68,0.0,0.0,
+T-007,2025-07-19,C1,"Consortium meeting, Espoo",WP1,1362.81,1362.81,0.0,0.0,
+T-008,2025-08-18,C1,"Consortium meeting, Delft",WP1,774.36,774.36,0.0,0.0,
+T-009,2025-09-17,C1,Conference travel: European Quantum Technologies Conference,WP4,1105.72,1105.72,0.0,0.0,
+T-010,2025-10-17,C1,"Consortium meeting, Espoo",WP1,1120.76,1120.76,0.0,0.0,
+T-011,2025-11-16,C1,"Consortium meeting, Munich",WP1,730.71,730.71,0.0,0.0,
+T-012,2025-12-16,C1,"Conference travel: Superconductivity workshop, Turin",WP4,474.58,474.58,0.0,0.0,
+T-013,2026-01-15,C1,"Consortium meeting, Grenoble",WP1,762.46,762.46,0.0,0.0,
+T-014,2026-02-14,C1,"Consortium meeting, Espoo",WP1,1316.7,1316.7,0.0,0.0,
+T-015,2026-03-16,C1,"Conference travel: APS March Meeting, USA",WP4,2726.29,2726.29,0.0,0.0,
+T-016,2026-04-15,C1,"Consortium meeting, Grenoble",WP1,763.47,763.47,0.0,0.0,
+T-017,2026-05-15,C1,"Consortium meeting, Espoo",WP1,1163.91,1163.91,0.0,0.0,
+T-018,2026-06-15,C1,"Conference travel: Quantum technology conference, Rotterdam",WP4,965.01,965.01,0.0,0.0,
+T-019,2026-03-02,C1,"Conference travel: APS March Meeting, USA",WP4,4150.0,4150.0,0.0,2800.0,W01
+E-01,2025-03-01,C2,Microwave signal generator,WP3,48000.0,12800.0,35200.0,0.0,R04
+E-02,2025-02-01,C2,Cryogenic low-noise amplifiers (4),WP3,6233.33,6233.33,0.0,0.0,
+E-03,2025-05-01,C2,Arbitrary waveform generator,WP3,6533.33,6533.33,0.0,0.0,
+E-04,2025-09-01,C2,Cryogenic probe station,WP3,25000.0,25000.0,0.0,25000.0,W03
+E-05,2025-02-01,C2,Lab data server,WP1,1700.0,1700.0,0.0,0.0,
+E-06,2025-11-01,C2,Vector network analyser,WP3,8000.0,5600.0,2400.0,0.0,R04
+C-001,2025-01-28,C3,Liquid helium delivery,WP3,1667.42,1667.42,0.0,0.0,
+C-002,2025-02-11,C3,Liquid helium delivery,WP3,1629.68,1629.68,0.0,0.0,
+C-003,2025-02-26,C3,Liquid helium delivery,WP3,1848.9,1848.9,0.0,0.0,
+C-004,2025-03-12,C3,Liquid helium delivery,WP3,1779.43,1779.43,0.0,0.0,
+C-005,2025-03-27,C3,Liquid helium delivery (commercial testing activity),WP3,1949.45,1597.91,351.54,0.0,R06
+C-006,2025-04-10,C3,Liquid helium delivery (commercial testing activity),WP3,1473.39,1207.7,265.69,0.0,R06
+C-007,2025-04-25,C3,Liquid helium delivery (commercial testing activity),WP3,1791.72,1468.62,323.1,0.0,R06
+C-008,2025-05-09,C3,Liquid helium delivery,WP3,1731.31,1731.31,0.0,0.0,
+C-009,2025-05-24,C3,Liquid helium delivery,WP3,1607.03,1607.03,0.0,0.0,
+C-010,2025-06-07,C3,Liquid helium delivery,WP3,1899.44,1899.44,0.0,0.0,
+C-011,2025-06-22,C3,Liquid helium delivery,WP3,1782.65,0.0,1782.65,0.0,R05
+C-012,2025-07-06,C3,Liquid helium delivery,WP3,1683.59,0.0,1683.59,0.0,R05
+C-013,2025-07-21,C3,"Cleanroom consumables (wafers, resist)",WP2,1410.33,1410.33,0.0,0.0,
+C-014,2025-08-04,C3,"Cleanroom consumables (wafers, resist)",WP2,2789.97,2789.97,0.0,0.0,
+C-015,2025-08-19,C3,"Cleanroom consumables (wafers, resist)",WP2,2629.94,2629.94,0.0,0.0,
+C-016,2025-09-02,C3,"Cleanroom consumables (wafers, resist)",WP2,2234.32,0.0,2234.32,0.0,R07
+C-017,2025-09-17,C3,"Cleanroom consumables (wafers, resist)",WP2,1691.74,1691.74,0.0,0.0,
+C-018,2025-10-01,C3,"Cleanroom consumables (wafers, resist)",WP2,2939.7,2939.7,0.0,0.0,
+C-019,2025-10-16,C3,"Cleanroom consumables (wafers, resist)",WP2,2144.44,2144.44,0.0,0.0,
+C-020,2025-10-30,C3,"Cleanroom consumables (wafers, resist)",WP2,1873.55,1873.55,0.0,0.0,
+C-021,2025-11-14,C3,"Cleanroom consumables (wafers, resist)",WP2,2843.53,2843.53,0.0,0.0,
+C-022,2025-11-28,C3,"Cleanroom consumables (wafers, resist)",WP2,1638.31,1638.31,0.0,0.0,
+C-023,2025-12-13,C3,Chip packaging and wire-bonding service,WP2,3660.0,3660.0,0.0,0.0,
+C-024,2025-12-27,C3,Chip packaging and wire-bonding service,WP2,3660.0,3660.0,0.0,0.0,
+C-025,2026-01-11,C3,Chip packaging and wire-bonding service,WP2,3660.0,3660.0,0.0,0.0,
+C-026,2026-01-25,C3,Open-access publication fee,WP4,2684.0,2684.0,0.0,0.0,
+C-027,2026-02-09,C3,Open-access publication fee,WP4,3233.0,3233.0,0.0,0.0,
+C-028,2026-02-23,C3,Open-access publication fee,WP4,3538.0,3538.0,0.0,0.0,
+C-029,2026-03-10,C3,Conference registration fee,WP4,549.0,549.0,0.0,0.0,
+C-030,2026-03-24,C3,Conference registration fee,WP4,756.4,756.4,0.0,0.0,
+C-031,2026-04-08,C3,Conference registration fee,WP4,915.0,915.0,0.0,0.0,
+C-032,2026-04-22,C3,Conference registration fee,WP4,585.6,585.6,0.0,0.0,
+C-033,2026-05-07,C3,Conference registration fee,WP4,841.8,841.8,0.0,0.0,
+C-034,2026-05-21,C3,Conference registration fee,WP4,683.2,683.2,0.0,0.0,
+C-035,2026-06-05,C3,Printing of dissemination material,WP4,488.0,488.0,0.0,0.0,
+C-036,2026-06-20,C3,Printing of dissemination material,WP4,488.0,488.0,0.0,0.0,
+C-900,2024-12-18,C3,Cleanroom consumables (delivered before the start),WP2,1950.0,0.0,1950.0,0.0,R01
+SC-01,2026-03-16,B,Independent validation of control firmware (task 3.4),WP3,24000.0,24000.0,0.0,0.0,
+SC-02,2025-11-20,B,Set-up of a data-management platform,WP1,9500.0,9500.0,0.0,9500.0,W02
+F-01,2025-02-05,C3,Bank charge on the transfer of the EU pre-financing,WP1,35.0,0.0,35.0,0.0,R08
+F-02,2026-01-12,C3,Late-payment interest paid to a supplier,WP3,180.0,0.0,180.0,0.0,R09

@@ -1,0 +1,9 @@
+category,budget_eur,declared_eur,eligible_eur,ineligible_eur,at_risk_eur,budget_used_pct
+A. Personnel costs,1080000.0,471934.87,452837.2,19097.67,0.0,41.9
+B. Subcontracting costs,60000.0,33500.0,33500.0,0.0,9500.0,55.8
+C.1 Travel and subsistence,45000.0,24178.69,24178.69,0.0,2800.0,53.7
+C.2 Equipment,180000.0,95466.66,57866.66,37600.0,25000.0,32.1
+"C.3 Other goods, works and services",160000.0,70946.84,62140.95,8805.89,0.0,38.8
+D. Other cost categories,0.0,0.0,0.0,0.0,0.0,
+E. Indirect costs,366250.0,165631.76,149255.88,16375.88,6950.0,40.8
+Total,1891250.0,861658.82,779779.38,81879.44,44250.0,41.2

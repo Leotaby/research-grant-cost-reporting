@@ -1,0 +1,5 @@
+wp,name,planned_pm,expected_pm_to_date,eligible_pm,planned_used_pct
+WP1,Project management,40,15.0,9.0,22.6
+WP2,Device fabrication,100,37.5,42.3,42.3
+WP3,Cryogenic testing,100,37.5,51.7,51.7
+WP4,Dissemination and exploitation,20,7.5,4.8,24.0

@@ -1,0 +1,69 @@
+{
+  "project": "QPL-DEMO",
+  "description": "Fictional EU-funded research project: a pilot line for superconducting quantum devices. The project, the beneficiary, the staff and every figure in this folder are invented for demonstration.",
+  "beneficiary": "Fictional university physics department (public body, Italy)",
+  "programme": "HORIZON",
+  "action_type": "RIA",
+  "funding_rate": 1.0,
+  "start": "2025-01-01",
+  "end": "2028-12-31",
+  "reporting_periods": {
+    "RP1": {
+      "start": "2025-01-01",
+      "end": "2026-06-30",
+      "closed_financial_years": [
+        2025
+      ]
+    },
+    "RP2": {
+      "start": "2026-07-01",
+      "end": "2027-12-31",
+      "closed_financial_years": [
+        2025,
+        2026
+      ]
+    },
+    "RP3": {
+      "start": "2028-01-01",
+      "end": "2028-12-31",
+      "closed_financial_years": [
+        2025,
+        2026,
+        2027
+      ]
+    }
+  },
+  "budget_eur": {
+    "A": 1080000,
+    "B": 60000,
+    "C1": 45000,
+    "C2": 180000,
+    "C3": 160000,
+    "D": 0
+  },
+  "work_packages": {
+    "WP1": {
+      "name": "Project management",
+      "planned_person_months": 40
+    },
+    "WP2": {
+      "name": "Device fabrication",
+      "planned_person_months": 100
+    },
+    "WP3": {
+      "name": "Cryogenic testing",
+      "planned_person_months": 100
+    },
+    "WP4": {
+      "name": "Dissemination and exploitation",
+      "planned_person_months": 20
+    }
+  },
+  "subcontracts_in_annex1": [
+    "SC-01"
+  ],
+  "travel_policy": {
+    "flight_class": "economy"
+  },
+  "direct_award_limit_eur": 140000
+}
