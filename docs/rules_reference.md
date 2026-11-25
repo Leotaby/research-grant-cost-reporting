@@ -64,6 +64,13 @@ are needed for them.
 Every ineligible direct cost in the base therefore also removes 25% (or 7%) on top. Run the tool
 with `--programme STANDARD` to see the same data under the 7% rule.
 
+### Co-funded actions
+
+The EU funding rate is not always 100%. Most Chips JU calls are co-funded by the Joint Undertaking
+and the participating states: the EU contribution covers a share of the eligible costs and national
+authorities can fund part of the rest under their own rules, so the same costs are reported twice,
+once under each set of rules. The demo uses an EU funding rate of 50%.
+
 ## 5. Ineligible costs (MGA Art. 6.3)
 
 Never eligible, among others: return on capital and dividends; debt and debt service charges;
@@ -90,14 +97,36 @@ another EU grant (check R07).
   - VAT is eligible only where it is not recoverable by the beneficiary; fines, penalties,
     late-payment interest and exchange losses are not eligible.
 
-## 7. Certificate and record keeping
+## 7. Reporting deadlines, payments, audit certificate and records
 
-- **Certificate on the financial statements (CFS):** in Horizon Europe it is required with the
-  final report when the requested EU contribution (actual costs) reaches EUR 430 000
-  (EUR 725 000 for beneficiaries with a systems and process audit). Other programmes set the
-  threshold in the Data Sheet.
-- **Records:** keep supporting documents for 5 years after the payment of the balance (3 years for
-  grants of up to EUR 60 000), as set in the Data Sheet (MGA Art. 20).
+These are the standard time limits; the Data Sheet of each grant agreement sets the ones that apply.
+
+- **Continuous reporting (MGA Art. 21; Data Sheet 4.1):** deliverables, milestones and critical
+  risks are reported in the Funding & Tenders Portal throughout the action.
+- **Periodic report (Art. 21; Data Sheet 4.2):** due within 60 days after the end of each
+  reporting period, with a technical part and a financial part. Each beneficiary fills in and
+  signs its own financial statement in the Portal; the coordinator assembles the report and
+  submits it.
+- **Payments (Art. 22):** the granting authority pays within 90 days of receiving the report. The
+  deadline is suspended while it waits for missing information.
+- **Final report:** submitted with the last periodic report, within 60 days after the end of the
+  action; the payment of the balance follows.
+- **Certificate on the financial statements (CFS; Art. 24; Data Sheet 4.3):** in Horizon Europe
+  it is required when the EU contribution a beneficiary requests as reimbursement of actual costs
+  reaches EUR 430 000 over the whole action (EUR 725 000 for beneficiaries with an approved
+  systems and process audit). Flat-rate costs, such as indirect costs, do not count towards the
+  threshold. It is submitted only with the final report, or when a beneficiary's participation
+  ends, and it is issued by a qualified external auditor or, for public bodies, by a competent and
+  independent public officer. Other programmes set the threshold in the Data Sheet.
+- **Records (Art. 20):** keep supporting documents for 5 years after the payment of the balance
+  (3 years for grants of up to EUR 60 000).
+- **Audits (Art. 25):** the granting authority can start checks, reviews and audits during the
+  action and up to 2 years after the payment of the balance.
+- **National co-funding:** where a national authority funds part of the costs, its grant decree
+  sets its own reporting deadlines and certification requirements.
+
+`grantcheck/deadlines.py` turns these time limits into a calendar for the project and checks the
+beneficiary's position against the CFS threshold.
 
 ## Sources
 
@@ -112,3 +141,9 @@ another EU grant (check R07).
 - DPR 10 marzo 2025, n. 66, GU n. 105 of 8 May 2025:
   https://www.normattiva.it/eli/id/2025/05/08/25G00073/ORIGINAL
 - D.Lgs. 31 marzo 2023, n. 36, Art. 50: https://www.brocardi.it/nuovo-codice-appalti/art50.html
+- European Commission, project officer's presentation at the kick-off of a Horizon Europe project
+  (OSCARS, 14 March 2024): report due 60 days after the period ends, payment within 90 days, CFS
+  only at final reporting, audits up to 2 years after the balance:
+  https://indico.in2p3.fr/event/32021/sessions/20402/attachments/83288/123981/20240314-KoM-EC-Officer-OSCARS-EnricoPellizzari.pdf
+- Chips Joint Undertaking, *Annual activity report 2024*, "Chips for Europe Initiative calls":
+  https://aar2024.chips-ju.europa.eu/annual-report/chips-for-europe-initiative-calls

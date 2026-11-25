@@ -1,0 +1,4 @@
+period,from,to,report,report_due,payment,payment_by
+RP1,2025-01-01,2026-06-30,Periodic report,2026-08-29,Interim payment,2026-11-27
+RP2,2026-07-01,2027-12-31,Periodic report,2028-02-29,Interim payment,2028-05-29
+RP3,2028-01-01,2028-12-31,Periodic and final report,2029-03-01,Payment of the balance,2029-05-30

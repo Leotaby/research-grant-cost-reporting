@@ -31,7 +31,14 @@
 | Doppio finanziamento | Double funding | Lo stesso costo su due sovvenzioni |
 | Prefinanziamento | Pre-financing | |
 | Pagamento intermedio / saldo | Interim / balance payment | |
-| Certificato di audit sui rendiconti | Certificate on the financial statements (CFS) | Horizon Europe: da 430.000 euro |
+| Certificato di audit sui rendiconti | Certificate on the financial statements (CFS) | Horizon Europe: da 430.000 euro, solo con la relazione finale |
+| Revisore esterno indipendente | Independent external auditor | Rilascia il CFS |
+| Scadenza | Deadline | Relazione periodica: 60 giorni dalla fine del periodo |
+| Termine di pagamento | Time to pay | 90 giorni dal ricevimento della relazione |
+| Rendicontazione continua | Continuous reporting | Deliverable, milestone e rischi sul portale |
+| Decreto di concessione | Grant decree | Atto del finanziamento nazionale |
+| Stato di avanzamento lavori (SAL) | Progress statement | Rendicontazione intermedia nei finanziamenti nazionali |
+| Conservazione dei documenti | Record-keeping | 5 anni dal pagamento del saldo |
 | Rimodulazione del budget | Budget transfer | Art. 5.5 del GA |
 | Emendamento | Amendment | |
 | Stazione appaltante | Contracting authority | Le università pubbliche lo sono |

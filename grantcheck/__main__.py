@@ -10,6 +10,8 @@ from pathlib import Path
 import pandas as pd
 
 from .config import PROGRAMMES
+from .deadlines import cfs_status, closing_dates, report_due, reporting_calendar
+from .deliverables import deliverable_status
 from .personnel import personnel_costs
 from .report import write_outputs
 from .rules import check_expenses
@@ -29,8 +31,17 @@ def run(data_dir: Path, period_id: str, out_dir: Path, programme_key: str | None
     issues = pd.DataFrame(p_issues + e_issues)
     statement, summary = financial_statement(personnel, lines, project, programme, period)
     wps = person_months(wp_days, project, summary["time_elapsed_pct"])
+    # the report is prepared for the day it is due: 60 days after the period ends
+    summary["report_date"] = report_due(period["end"], programme).date().isoformat()
+    deliv = None
+    if (data_dir / "deliverables.csv").exists():
+        deliv = deliverable_status(pd.read_csv(data_dir / "deliverables.csv"), project["start"],
+                                   summary["report_date"])
+    calendar = {"periods": reporting_calendar(project, programme), "closing": closing_dates(project, programme),
+                "cfs": cfs_status(summary["requested_for_actual_costs_eur"], programme,
+                                  summary["months_done"], summary["months_total"])}
     report = write_outputs(out_dir, period_id, period, project, programme, personnel, lines, issues,
-                           statement, summary, wps)
+                           statement, summary, wps, deliv, calendar)
     return statement, summary, issues, report
 
 

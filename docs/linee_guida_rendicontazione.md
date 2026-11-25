@@ -70,25 +70,54 @@ Sono un forfait sui costi diretti ammissibili (25% in Horizon Europe, escluso il
 richiedono giustificativi. Ogni costo diretto non ammissibile fa perdere anche il 25% calcolato su
 di esso.
 
-## 9. Certificato e conservazione dei documenti
+## 9. Tempistiche e scadenze della rendicontazione
 
-- In Horizon Europe serve un **certificato di audit sui rendiconti (CFS)** con la relazione finale
-  se il contributo UE richiesto raggiunge 430.000 euro: prevedere il costo dell'audit nel budget.
+I termini indicati sono quelli standard; valgono quelli fissati nel Data Sheet dell'Accordo di
+sovvenzione.
+
+- **Rendicontazione continua:** deliverable, milestone e rischi critici si aggiornano sul portale
+  Funding & Tenders durante tutto il progetto, non solo a fine periodo.
+- **Relazione periodica:** va presentata **entro 60 giorni dalla fine di ogni periodo di
+  rendicontazione**. Comprende una parte tecnica e una parte finanziaria.
+- Ogni beneficiario compila e firma sul portale il proprio rendiconto finanziario; il coordinatore
+  raccoglie i rendiconti e presenta la relazione.
+- **Pagamento:** l'ente finanziatore paga **entro 90 giorni** dal ricevimento della relazione; il
+  termine si sospende se la relazione è incompleta o servono chiarimenti.
+- **Relazione finale:** si presenta con l'ultima relazione periodica, entro 60 giorni dalla fine
+  del progetto; segue il pagamento del saldo.
+- **Scadenza interna consigliata:** rendiconto del dipartimento pronto entro 30 giorni dalla fine
+  del periodo, per lasciare al coordinatore il tempo dei controlli.
+- **Cofinanziamento nazionale:** se una parte dei costi è finanziata da un'amministrazione
+  nazionale, scadenze e modalità di rendicontazione sono quelle del decreto di concessione.
+
+## 10. Certificato di audit, controlli e conservazione dei documenti
+
+- In Horizon Europe serve un **certificato di audit sui rendiconti (CFS)** se il contributo UE
+  richiesto dal beneficiario a rimborso di costi reali raggiunge **430.000 euro** sull'intero
+  progetto; i costi indiretti forfettari non si contano. Si presenta **solo con la relazione
+  finale**.
+- Lo rilascia un revisore esterno indipendente; per gli enti pubblici può rilasciarlo un
+  funzionario pubblico competente e indipendente. Prevedere il costo dell'audit nel budget.
+- L'ente finanziatore può avviare controlli e audit durante il progetto e **fino a 2 anni dopo il
+  pagamento del saldo**.
 - Conservare tutti i giustificativi per **5 anni dal pagamento del saldo** (3 anni per
   sovvenzioni fino a 60.000 euro).
 
-## 10. Progetti su fondi di coesione (FESR, FSE+)
+## 11. Progetti su fondi di coesione (FESR, FSE+)
 
 Per i progetti finanziati con programmi nazionali o regionali cofinanziati dai fondi di coesione
 valgono il Regolamento (UE) 2021/1060 e il DPR 10 marzo 2025, n. 66: il costo orario del personale
 si calcola dividendo il costo annuo lordo documentato per **1.720 ore** (in proporzione per il
 part-time), e l'IVA è ammissibile solo se non recuperabile.
 
-## 11. Calendario dei controlli
+## 12. Calendario dei controlli
 
 | Quando | Cosa |
 | --- | --- |
 | Ogni mese | Timesheet e dichiarazioni firmati; fatture registrate con CUP |
 | Ogni trimestre | Controllo con `python -m grantcheck`: giornate rispetto al limite di 215, ammortamenti, IVA, documenti mancanti |
 | Prima di ogni relazione periodica | Correggere le non conformità, chiedere le approvazioni (subappalti, emendamenti), preparare il rendiconto |
+| Entro 30 giorni dalla fine del periodo | Rendiconto del dipartimento pronto e verificato (scadenza interna) |
+| Entro 60 giorni dalla fine del periodo | Relazione periodica presentata dal coordinatore |
 | Relazione finale | Certificato di audit (CFS) se richiesto |
+| Dopo il saldo | Audit possibili per 2 anni; documenti conservati per 5 anni |

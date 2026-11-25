@@ -186,3 +186,24 @@ staff.to_csv(DATA / "staff.csv", index=False)
 time_records.to_csv(DATA / "time_records.csv", index=False)
 expenses.to_csv(DATA / "expenses.csv", index=False)
 print(f"staff: {len(staff)} people · time records: {len(time_records)} rows · expenses: {len(expenses)} lines")
+
+# ---- deliverables and milestones (Annex 1), with submission dates up to the report date --------
+deliverables = pd.DataFrame([
+    # id,     type,          title,                                        wp,   due month, submitted
+    ("MS1",  "milestone",   "Kick-off meeting held",                      "WP1", 1,  "2025-01-22"),
+    ("D1.1", "deliverable", "Project management handbook",                "WP1", 3,  "2025-03-28"),
+    ("D4.2", "deliverable", "Project website and first newsletter",       "WP4", 4,  "2025-04-30"),
+    ("D1.2", "deliverable", "Data management plan",                       "WP1", 6,  "2025-07-14"),
+    ("D4.1", "deliverable", "Dissemination and communication plan",       "WP4", 6,  "2025-06-30"),
+    ("D3.1", "deliverable", "Cryogenic test protocol",                    "WP3", 9,  "2025-10-20"),
+    ("D2.1", "deliverable", "Process design kit, version 1",              "WP2", 12, "2025-12-19"),
+    ("MS2",  "milestone",   "Fabrication baseline frozen",                "WP2", 12, "2026-01-15"),
+    ("D2.2", "deliverable", "Junction fabrication baseline report",       "WP2", 15, "2026-04-10"),
+    ("D3.2", "deliverable", "First test results on demonstrator chips",   "WP3", 18, None),
+    ("MS3",  "milestone",   "Demonstrator chip tested at 10 mK",          "WP3", 18, None),
+    ("D1.3", "deliverable", "Risk register, first update",                "WP1", 20, None),
+    ("MS4",  "milestone",   "First external users access the pilot line", "WP2", 24, None),
+    ("D4.3", "deliverable", "Exploitation plan",                          "WP4", 24, None),
+], columns=["id", "type", "title", "wp", "due_month", "submitted_date"])
+deliverables.to_csv(DATA / "deliverables.csv", index=False)
+print(f"deliverables and milestones: {len(deliverables)} rows")

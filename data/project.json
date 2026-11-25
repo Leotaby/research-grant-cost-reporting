@@ -1,10 +1,11 @@
 {
   "project": "QPL-DEMO",
-  "description": "Fictional EU-funded research project: a pilot line for superconducting quantum devices. The project, the beneficiary, the staff and every figure in this folder are invented for demonstration.",
+  "description": "Fictional EU-funded research project: a pilot line for superconducting quantum devices, set up like a Chips JU research and innovation action: Horizon Europe rules, an EU contribution of 50% of the eligible costs, and the rest from national co-funding or own resources. The project, the beneficiary, the staff and every figure in this folder are invented for demonstration.",
   "beneficiary": "Fictional university physics department (public body, Italy)",
   "programme": "HORIZON",
+  "funding_scheme": "Chips JU research and innovation action under Horizon Europe (fictional set-up)",
   "action_type": "RIA",
-  "funding_rate": 1.0,
+  "funding_rate": 0.5,
   "start": "2025-01-01",
   "end": "2028-12-31",
   "reporting_periods": {

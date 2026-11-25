@@ -1,8 +1,8 @@
 # QPL-DEMO: financial report, RP1 (2025-01-01 to 2026-06-30)
 
 *Fictional project and data, produced by `python -m grantcheck --period RP1`.
-Programme rules: Horizon Europe, indirect costs 25% flat rate,
-funding rate 100%.*
+Rules: Horizon Europe (Chips JU research and innovation action under Horizon Europe (fictional set-up)), indirect costs 25%
+flat rate, EU funding rate 50%.*
 
 ## Key figures
 
@@ -13,7 +13,8 @@ funding rate 100%.*
 | Ineligible (cut, including the indirect costs on them) | 81,879.44 |
 | At risk: eligible only if a decision or document comes through | 44,250.00 |
 | Indirect costs included in the eligible total | 149,255.88 |
-| EU contribution requested for the period | 779,779.38 |
+| EU contribution requested (50% of the eligible costs) | 389,889.69 |
+| Not covered by the EU: national co-funding or own resources | 389,889.69 |
 
 Month 18 of 48 (37.5% of the action);
 41.2% of the total budget used.
@@ -26,7 +27,9 @@ Month 18 of 48 (37.5% of the action);
 - **WP3 Cryogenic testing** has used 51.7 person-months against about 37.5 expected by now (52% of its plan): check that the remaining work fits the remaining effort.
 - **WP1 Project management** has 9.0 eligible person-months against about 15.0 expected by now: check whether time is being worked but not recorded.
 - **WP4 Dissemination and exploitation** has 4.8 eligible person-months against about 7.5 expected by now: check whether time is being worked but not recorded.
-- This period alone requests EUR 779,779, above the EUR 430,000 threshold: a certificate on the financial statements (CFS) covering all periods will be needed with the final report. Budget the audit fee now.
+- Audit certificate: EUR 315,262 of EU contribution requested for actual costs so far, 73% of the EUR 430,000 threshold. At this pace the total reaches about EUR 840,698, so a certificate on the financial statements (CFS) will be due with the final report: budget the audit fee now.
+- Overdue at the report date: D3.2 First test results on demonstrator chips (60 days); MS3 Demonstrator chip tested at 10 mK (60 days). Explain the delay and the new date in the technical report.
+- 4 other items were submitted late (on average 15 days).
 - Personnel findings concern 4 people (S05, S08, S09, S10): fix the time records and the cap before the report is submitted.
 
 ## Financial statement by cost category
@@ -76,6 +79,43 @@ Month 18 of 48 (37.5% of the action);
 
 One person-month = 215 / 12 = 17.9 day-equivalents.
 
+## Deliverables and milestones
+
+Status at the report date, 2026-08-29.
+
+| ID | Type | Title | WP | Due | Submitted | Status | Days late |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| MS1 | milestone | Kick-off meeting held | WP1 | 2025-01-31 | 2025-01-22 | on time | 0 |
+| D1.1 | deliverable | Project management handbook | WP1 | 2025-03-31 | 2025-03-28 | on time | 0 |
+| D4.2 | deliverable | Project website and first newsletter | WP4 | 2025-04-30 | 2025-04-30 | on time | 0 |
+| D1.2 | deliverable | Data management plan | WP1 | 2025-06-30 | 2025-07-14 | late | 14 |
+| D4.1 | deliverable | Dissemination and communication plan | WP4 | 2025-06-30 | 2025-06-30 | on time | 0 |
+| D3.1 | deliverable | Cryogenic test protocol | WP3 | 2025-09-30 | 2025-10-20 | late | 20 |
+| D2.1 | deliverable | Process design kit, version 1 | WP2 | 2025-12-31 | 2025-12-19 | on time | 0 |
+| MS2 | milestone | Fabrication baseline frozen | WP2 | 2025-12-31 | 2026-01-15 | late | 15 |
+| D2.2 | deliverable | Junction fabrication baseline report | WP2 | 2026-03-31 | 2026-04-10 | late | 10 |
+| D3.2 | deliverable | First test results on demonstrator chips | WP3 | 2026-06-30 |  | overdue | 60 |
+| MS3 | milestone | Demonstrator chip tested at 10 mK | WP3 | 2026-06-30 |  | overdue | 60 |
+| D1.3 | deliverable | Risk register, first update | WP1 | 2026-08-31 |  | upcoming | 0 |
+| MS4 | milestone | First external users access the pilot line | WP2 | 2026-12-31 |  | upcoming | 0 |
+| D4.3 | deliverable | Exploitation plan | WP4 | 2026-12-31 |  | upcoming | 0 |
+
+## Reporting calendar and audit certificate
+
+Each report is due 60 days after its period ends; payment follows within
+90 days if the report is sent on the due date and accepted as it stands.
+
+| Period | From | To | Report | Report due | Payment | Payment by |
+| --- | --- | --- | --- | --- | --- | --- |
+| RP1 | 2025-01-01 | 2026-06-30 | Periodic report | 2026-08-29 | Interim payment | 2026-11-27 |
+| RP2 | 2026-07-01 | 2027-12-31 | Periodic report | 2028-02-29 | Interim payment | 2028-05-29 |
+| RP3 | 2028-01-01 | 2028-12-31 | Periodic and final report | 2029-03-01 | Payment of the balance | 2029-05-30 |
+
+- Certificate on the financial statements (CFS): due with the final report if the EU contribution requested for actual costs reaches EUR 430,000 over the whole action (flat-rate indirect costs do not count). So far: EUR 315,261.75 (73.3%); at this pace: about EUR 840,698.
+- Audits by the granting authority can start until 2031-05-30
+  (2 years after the balance, if it is paid by 2029-05-30).
+- Keep every supporting document until 2034-05-30 (5 years after the balance).
+
 ## Figures
 
 ![fig1_declared_vs_eligible.png](figures/fig1_declared_vs_eligible.png)
@@ -85,3 +125,5 @@ One person-month = 215 / 12 = 17.9 day-equivalents.
 ![fig3_days_against_cap.png](figures/fig3_days_against_cap.png)
 
 ![fig4_findings_by_check.png](figures/fig4_findings_by_check.png)
+
+![fig5_deliverables.png](figures/fig5_deliverables.png)

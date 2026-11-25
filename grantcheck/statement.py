@@ -55,9 +55,13 @@ def financial_statement(personnel: pd.DataFrame, lines: pd.DataFrame, project: d
         "declared_eur": total["declared_eur"], "eligible_eur": total["eligible_eur"],
         "ineligible_eur": total["ineligible_eur"], "at_risk_eur": total["at_risk_eur"],
         "indirect_eur": e_eligible, "requested_contribution_eur": contribution,
+        "funding_rate": project["funding_rate"],
+        "not_covered_eur": round(total["eligible_eur"] - contribution, 2),
         "budget_eur": total["budget_eur"], "time_elapsed_pct": round(100 * months_done / months_total, 1),
         "months_done": months_done, "months_total": months_total,
         "cfs_threshold_eur": programme.cfs_threshold_eur,
+        # the CFS threshold counts the contribution requested for actual costs: not flat-rate indirect costs
+        "requested_for_actual_costs_eur": round((total["eligible_eur"] - e_eligible) * project["funding_rate"], 2),
     }
     return st, summary
 

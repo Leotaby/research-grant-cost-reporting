@@ -3,9 +3,11 @@
 Everything in this folder is invented: the project, the department, the people (identified only by
 role) and the amounts. `scripts/make_synthetic_data.py` regenerates it.
 
-QPL-DEMO is a 48-month Horizon Europe research and innovation action (January 2025 to December 2028)
-on a pilot line for superconducting quantum devices. The files describe one partner, a university
-physics department, in reporting period 1 (January 2025 to June 2026).
+QPL-DEMO is a 48-month research and innovation action (January 2025 to December 2028) on a pilot
+line for superconducting quantum devices, set up like a Chips JU action: Horizon Europe cost rules,
+an EU contribution of 50% of the eligible costs, the rest from national co-funding or own
+resources. The files describe one partner, a university physics department, in reporting period 1
+(January 2025 to June 2026).
 
 ## Files
 
@@ -14,6 +16,7 @@ physics department, in reporting period 1 (January 2025 to June 2026).
 | `project.json` | Duration, reporting periods, budget by cost category, work packages with planned person-months, subcontracts listed in Annex 1, travel rule, national direct-award threshold |
 | `staff.csv` | One row per person: role, contract, annual personnel costs per year (gross pay plus employer contributions and taxes on pay; annualised for people hired during the year), whether the person works only on this action, and days declared on other EU grants |
 | `time_records.csv` | Days worked per person, month and work package; record type (timesheet, or monthly day-declaration for people working only on the action); signed by the person and by the supervisor |
+| `deliverables.csv` | Deliverables and milestones from Annex 1: id, title, work package, due month, date submitted. Their status is measured on the day the periodic report is due, 60 days after the period ends |
 | `expenses.csv` | Ledger of purchase costs, subcontracting and charges booked to the project: date, category, supplier, invoice, net amount, VAT and whether it is recoverable, amount declared, procurement procedure; equipment price, useful life, date available and share of use; flight class and economy fare; subcontract id; other EU grant charged |
 
 Budget categories follow the EU grant agreement: A personnel, B subcontracting, C.1 travel and

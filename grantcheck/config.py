@@ -13,7 +13,11 @@ class Programme:
     indirect_rate: float                    # flat rate for indirect costs (AGA Art. 6.2.E)
     indirect_base_excludes: tuple           # direct cost categories left out of the flat-rate base
     day_cap: int = 215                      # day-equivalents per person per year across EU grants
-    cfs_threshold_eur: float | None = None  # requested EU contribution that requires a CFS
+    cfs_threshold_eur: float | None = None  # EU contribution requested for actual costs that requires a CFS
+    report_days: int = 60                   # days after a reporting period ends to submit the report
+    payment_days: int = 90                  # days the granting authority has to pay after the report
+    record_years: int = 5                   # years to keep records after the payment of the balance
+    audit_years: int = 2                    # years after the balance in which an audit can start
 
 
 PROGRAMMES = {

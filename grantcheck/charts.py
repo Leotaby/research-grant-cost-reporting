@@ -152,3 +152,50 @@ def fig_issues(issues, out: Path, period_id: str):
             "Fictional data. Direct costs only; the indirect costs lost on top are in the statement.")
     fig.savefig(out, dpi=200)
     plt.close(fig)
+
+
+def fig_deliverables(items, out: Path, project_start: str, as_of: str, period_id: str):
+    from matplotlib.lines import Line2D
+
+    from .deliverables import month_position
+
+    d = items.sort_values(["due_month", "id"]).reset_index(drop=True)
+    now = month_position(project_start, as_of)
+    pos = list(range(len(d)))[::-1]
+    fig, ax = plt.subplots(figsize=(9, 5.4))
+    fig.subplots_adjust(top=0.80, bottom=0.2, left=0.40, right=0.97)
+    for yi, r in zip(pos, d.itertuples()):
+        due = float(r.due_month)
+        if r.status == "on time":
+            ax.plot(due, yi, "o", color=BLUE, ms=8, zorder=3)
+        elif r.status == "late":
+            sub = month_position(project_start, r.submitted_date)
+            ax.plot([due, sub], [yi, yi], color=ORANGE, lw=3, solid_capstyle="round", zorder=2)
+            ax.plot(sub, yi, "o", color=ORANGE, ms=8, zorder=3)
+            ax.plot(due, yi, "|", color=INK2, ms=12, mew=1.5, zorder=3)
+        elif r.status == "overdue":
+            ax.plot([due, now], [yi, yi], color=ORANGE, lw=3, linestyle=(0, (1.5, 1)), zorder=2)
+            ax.plot(due, yi, "X", color=ORANGE, ms=9, zorder=3)
+        else:
+            ax.plot(due, yi, "o", mfc=SURFACE, mec=MUTED, ms=8, mew=1.5, zorder=3)
+    ax.axvline(now, color=INK2, linewidth=1.1, linestyle="--")
+    ax.text(now + 0.2, len(d) - 0.4, "report date", fontsize=8.5, color=INK2, va="bottom")
+    ax.set_yticks(pos, [f"{r.id}  {r.title}" for r in d.itertuples()], fontsize=8.5)
+    ax.set_ylim(-0.7, len(d) - 0.1)
+    ax.set_xlim(0, 25)
+    ax.set_xticks(range(0, 25, 3))
+    ax.set_xlabel("Project month (due at the end of the month)")
+    _tidy(ax)
+    handles = [Line2D([], [], marker="o", color=BLUE, ls="", ms=7, label="On time"),
+               Line2D([], [], marker="o", color=ORANGE, lw=3, ms=7, label="Late: due date to submission"),
+               Line2D([], [], marker="X", color=ORANGE, lw=3, ls=(0, (1.5, 1)), ms=7, label="Overdue"),
+               Line2D([], [], marker="o", mfc=SURFACE, mec=MUTED, ls="", ms=7, label="Upcoming")]
+    ax.legend(handles=handles, frameon=False, fontsize=8, ncol=4, loc="upper center",
+              bbox_to_anchor=(0.32, -0.13))
+    counts = d["status"].value_counts()
+    _titles(fig, f"{period_id}: deliverables and milestones against their due dates",
+            f"At the report date ({as_of}): {counts.get('on time', 0)} on time, {counts.get('late', 0)} late, "
+            f"{counts.get('overdue', 0)} overdue, {counts.get('upcoming', 0)} upcoming",
+            "Fictional data.")
+    fig.savefig(out, dpi=200)
+    plt.close(fig)

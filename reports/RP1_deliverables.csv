@@ -1,0 +1,15 @@
+id,type,title,wp,due_month,submitted_date,due_date,status,days_late
+MS1,milestone,Kick-off meeting held,WP1,1,2025-01-22,2025-01-31,on time,0
+D1.1,deliverable,Project management handbook,WP1,3,2025-03-28,2025-03-31,on time,0
+D4.2,deliverable,Project website and first newsletter,WP4,4,2025-04-30,2025-04-30,on time,0
+D1.2,deliverable,Data management plan,WP1,6,2025-07-14,2025-06-30,late,14
+D4.1,deliverable,Dissemination and communication plan,WP4,6,2025-06-30,2025-06-30,on time,0
+D3.1,deliverable,Cryogenic test protocol,WP3,9,2025-10-20,2025-09-30,late,20
+D2.1,deliverable,"Process design kit, version 1",WP2,12,2025-12-19,2025-12-31,on time,0
+MS2,milestone,Fabrication baseline frozen,WP2,12,2026-01-15,2025-12-31,late,15
+D2.2,deliverable,Junction fabrication baseline report,WP2,15,2026-04-10,2026-03-31,late,10
+D3.2,deliverable,First test results on demonstrator chips,WP3,18,,2026-06-30,overdue,60
+MS3,milestone,Demonstrator chip tested at 10 mK,WP3,18,,2026-06-30,overdue,60
+D1.3,deliverable,"Risk register, first update",WP1,20,,2026-08-31,upcoming,0
+MS4,milestone,First external users access the pilot line,WP2,24,,2026-12-31,upcoming,0
+D4.3,deliverable,Exploitation plan,WP4,24,,2026-12-31,upcoming,0
