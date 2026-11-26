@@ -16,26 +16,29 @@ rng = np.random.default_rng(2026)
 MONTHS = pd.period_range("2025-01", "2026-06", freq="M")
 
 # ---- staff ---------------------------------------------------------------------------------
-# annual personnel costs = gross salary + employer social contributions and taxes on pay (EUR);
-# for a person hired during the year the figure is annualised (equivalent to pro-rating 215 days)
+# personnel costs = gross pay + employer social contributions and taxes on pay (EUR), as recorded
+# for the months of each calendar year that fall in the reporting period; months = how many of
+# those months the person was employed. Pay did not change in the first half of 2026.
 staff = pd.DataFrame([
-    # id,  role,                                  contract,          2025,    2026,  exclusive, other EU days 2025, 2026
-    ("S01", "Full professor (principal investigator)", "employee",        118000, 120400, False, 0, 0),
-    ("S02", "Associate professor",                     "employee",         92000,  93800, False, 0, 0),
-    ("S03", "Researcher (tenure track)",               "employee",         68000,  69400, False, 0, 0),
-    ("S04", "Postdoctoral researcher",                 "direct contract",  31000,  31600, True,  0, 0),
-    ("S05", "Postdoctoral researcher",                 "direct contract",  31000,  31600, True,  0, 0),
-    ("S06", "Laboratory technician",                   "employee",         47000,  47900, False, 0, 0),
-    ("S07", "Project manager",                         "employee",         44000,  44900, False, 0, 0),
-    ("S08", "Research engineer (fixed term)",          "employee",         51000,  52000, False, 0, 0),
-    ("S09", "Researcher",                              "employee",         66000,  67300, False, 70, 30),
-    ("S10", "Postdoctoral researcher (from Jul 2025)", "direct contract",  31000,  31600, False, 0, 0),
-], columns=["staff_id", "role", "contract", "annual_cost_2025", "annual_cost_2026", "exclusive",
+    # id,  role,                                       contract,       2025: cost, months, 2026: cost, months, other EU days 2025, 2026
+    ("S01", "Full professor (principal investigator)", "employee",        118000, 12, 59000, 6, 0, 0),
+    ("S02", "Associate professor",                     "employee",         92000, 12, 46000, 6, 0, 0),
+    ("S03", "Researcher (tenure track)",               "employee",         68000, 12, 34000, 6, 0, 0),
+    ("S04", "Postdoctoral researcher",                 "direct contract",  31000, 12, 15500, 6, 0, 0),
+    ("S05", "Postdoctoral researcher",                 "direct contract",  31000, 12, 15500, 6, 0, 0),
+    ("S06", "Laboratory technician",                   "employee",         47000, 12, 23500, 6, 0, 0),
+    ("S07", "Project manager",                         "employee",         44000, 12, 22000, 6, 0, 0),
+    ("S08", "Research engineer (fixed term)",          "employee",         51000, 12, 25500, 6, 0, 0),
+    ("S09", "Researcher",                              "employee",         66000, 12, 33000, 6, 70, 30),
+    ("S10", "Postdoctoral researcher (from Jul 2025)", "direct contract",  15500,  6, 15500, 6, 0, 0),
+], columns=["staff_id", "role", "contract", "cost_2025", "months_2025", "cost_2026", "months_2026",
             "other_eu_grant_days_2025", "other_eu_grant_days_2026"])
 
 # ---- monthly time records -------------------------------------------------------------------
-# days per month on each work package; exclusive staff file a monthly day-declaration,
-# the others a timesheet; both must be signed by the person and the supervisor
+# days per month on each work package. Two people sign a monthly declaration of days; the others
+# use the department's time-recording system (timesheets). Both must be signed by the person and
+# the supervisor.
+DECLARATION = {"S04", "S05"}
 plan = {
     "S01": {"WP1": 2.0, "WP2": 2.0, "WP3": 1.0},
     "S02": {"WP2": 2.0, "WP3": 2.0},
@@ -50,7 +53,6 @@ plan = {
 }
 rows = []
 for sid, wps in plan.items():
-    exclusive = bool(staff.set_index("staff_id").loc[sid, "exclusive"])
     for m in MONTHS:
         if sid == "S10" and m < pd.Period("2025-07", "M"):
             continue                                            # not yet hired
@@ -66,7 +68,7 @@ for sid, wps in plan.items():
                 signed_person = signed_supervisor = False       # monthly declarations never filed
             if sid == "S10" and str(m) in ("2026-03", "2026-04"):
                 signed_supervisor = False                       # timesheets not countersigned
-            rows.append((sid, str(m), wp, d, "monthly declaration" if exclusive else "timesheet",
+            rows.append((sid, str(m), wp, d, "monthly declaration" if sid in DECLARATION else "timesheet",
                          signed_person, signed_supervisor))
 time_records = pd.DataFrame(rows, columns=["staff_id", "month", "wp", "days", "record_type",
                                            "signed_by_person", "signed_by_supervisor"])

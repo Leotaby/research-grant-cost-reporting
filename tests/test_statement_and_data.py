@@ -13,6 +13,12 @@ DIRECT = {"A": 100.0, "B": 50.0, "C1": 0.0, "C2": 0.0, "C3": 0.0, "D": 0.0}
 
 def test_horizon_flat_rate_leaves_out_subcontracting():
     assert indirect_costs(DIRECT, PROGRAMMES["HORIZON"]) == pytest.approx(25.0)
+    # a half-cent gives the same result whatever the floating-point sum looks like:
+    # 25% of 597 023.50 is 149 255.875, and 25% of 662 527.06 is 165 631.765
+    assert indirect_costs({"A": 452837.20, "C1": 24178.69, "C2": 57866.66, "C3": 62140.95},
+                          PROGRAMMES["HORIZON"]) == 149255.88
+    assert indirect_costs({"A": 597023.4999999999}, PROGRAMMES["HORIZON"]) == 149255.88
+    assert indirect_costs({"A": 662527.0600000001}, PROGRAMMES["HORIZON"]) == 165631.76
 
 
 def test_standard_flat_rate_keeps_subcontracting_in_the_base():

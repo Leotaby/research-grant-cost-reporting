@@ -33,9 +33,10 @@ def test_records_and_audits_run_from_the_balance_payment():
 
 
 def test_cfs_threshold_and_projection():
-    s = cfs_status(315_261.75, HE, months_done=18, months_total=48)
+    # the whole requested EU contribution counts, the flat rate for indirect costs included
+    s = cfs_status(389_889.69, HE, months_done=18, months_total=48)
     assert not s["reached"] and s["expected"]
-    assert s["share_of_threshold_pct"] == pytest.approx(73.3)
-    assert s["projected_eur"] == pytest.approx(840_698.0)
+    assert s["share_of_threshold_pct"] == pytest.approx(90.7)
+    assert s["projected_eur"] == pytest.approx(1_039_705.84)
     assert cfs_status(100_000, HE, 18, 48)["expected"] is False
     assert cfs_status(100_000, PROGRAMMES["STANDARD"], 18, 48) is None          # threshold set per call

@@ -15,11 +15,11 @@
 | Spese generali, forfait | Overheads, flat rate | 25% in Horizon Europe |
 | Costi del personale | Personnel costs | Categoria A |
 | Costo annuo del personale | Annual personnel costs | Retribuzione lorda + oneri a carico dell'ente |
-| Tariffa giornaliera | Daily rate | Costo annuo / 215 |
+| Tariffa giornaliera | Daily rate | Costo del personale nel periodo ÷ giornate massime dichiarabili (215 l'anno) |
 | Costo orario | Hourly rate | Fondi di coesione: costo annuo lordo / 1.720 ore |
 | Giornate uomo / mesi uomo | Person-days / person-months | 1 mese uomo = 215/12 giornate |
-| Foglio presenze, timesheet | Timesheet, time record | Mensile, firmato |
-| Dichiarazione mensile (esclusività) | Monthly day-declaration | Per chi lavora solo sul progetto |
+| Dichiarazione mensile delle giornate | Monthly declaration of days | Firmata dalla persona e dal responsabile |
+| Sistema di rilevazione delle presenze, timesheet | Time-recording system, timesheet | Alternativa alla dichiarazione mensile |
 | Missioni | Travel and subsistence | Categoria C.1 |
 | Attrezzature | Equipment | Categoria C.2 |
 | Ammortamento | Depreciation | |
@@ -31,7 +31,7 @@
 | Doppio finanziamento | Double funding | Lo stesso costo su due sovvenzioni |
 | Prefinanziamento | Pre-financing | |
 | Pagamento intermedio / saldo | Interim / balance payment | |
-| Certificato di audit sui rendiconti | Certificate on the financial statements (CFS) | Horizon Europe: da 430.000 euro, solo con la relazione finale |
+| Certificato di audit sui rendiconti | Certificate on the financial statements (CFS) | Horizon Europe: da 430.000 euro di contributo UE richiesto, costi indiretti compresi; solo con la relazione finale |
 | Revisore esterno indipendente | Independent external auditor | Rilascia il CFS |
 | Scadenza | Deadline | Relazione periodica: 60 giorni dalla fine del periodo |
 | Termine di pagamento | Time to pay | 90 giorni dal ricevimento della relazione |

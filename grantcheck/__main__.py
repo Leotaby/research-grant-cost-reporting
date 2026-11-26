@@ -3,6 +3,8 @@
     python -m grantcheck --period RP1
     python -m grantcheck --period RP1 --programme STANDARD   # same data under a 7% flat rate
 """
+from __future__ import annotations
+
 import argparse
 import json
 from pathlib import Path
@@ -38,7 +40,7 @@ def run(data_dir: Path, period_id: str, out_dir: Path, programme_key: str | None
         deliv = deliverable_status(pd.read_csv(data_dir / "deliverables.csv"), project["start"],
                                    summary["report_date"])
     calendar = {"periods": reporting_calendar(project, programme), "closing": closing_dates(project, programme),
-                "cfs": cfs_status(summary["requested_for_actual_costs_eur"], programme,
+                "cfs": cfs_status(summary["requested_contribution_eur"], programme,
                                   summary["months_done"], summary["months_total"])}
     report = write_outputs(out_dir, period_id, period, project, programme, personnel, lines, issues,
                            statement, summary, wps, deliv, calendar)

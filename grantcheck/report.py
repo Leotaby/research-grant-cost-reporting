@@ -36,8 +36,8 @@ def _calendar_md(calendar: dict, programme) -> str:
     cfs = calendar["cfs"]
     if cfs:
         cfs_line = (f"- Certificate on the financial statements (CFS): due with the final report if the EU "
-                    f"contribution requested for actual costs reaches EUR {cfs['threshold_eur']:,.0f} over the "
-                    f"whole action (flat-rate indirect costs do not count). So far: "
+                    f"contribution requested reaches EUR {cfs['threshold_eur']:,.0f} over the whole action "
+                    f"(the flat rate for indirect costs counts too). So far: "
                     f"EUR {cfs['requested_so_far_eur']:,.2f} ({cfs['share_of_threshold_pct']:.1f}%); at this pace: "
                     f"about EUR {cfs['projected_eur']:,.0f}.")
     else:
@@ -112,7 +112,7 @@ def write_outputs(out_dir: Path, period_id: str, period: dict, project: dict, pr
                      "being worked but not recorded.")
     cfs = calendar["cfs"] if calendar else None
     if cfs:
-        so_far = (f"EUR {cfs['requested_so_far_eur']:,.0f} of EU contribution requested for actual costs so far, "
+        so_far = (f"EUR {cfs['requested_so_far_eur']:,.0f} of EU contribution requested so far, "
                   f"{cfs['share_of_threshold_pct']:.0f}% of the EUR {cfs['threshold_eur']:,.0f} threshold")
         if cfs["reached"]:
             notes.append(f"Audit certificate: {so_far}. A certificate on the financial statements (CFS) is "

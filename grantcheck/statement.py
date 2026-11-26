@@ -1,4 +1,8 @@
 """Financial statement for a reporting period, budget use and person-months per work package."""
+from __future__ import annotations
+
+from decimal import ROUND_HALF_EVEN, Decimal
+
 import pandas as pd
 
 from .config import CATEGORIES, CATEGORY_NAMES
@@ -6,10 +10,20 @@ from .config import CATEGORIES, CATEGORY_NAMES
 DAYS_PER_PERSON_MONTH = 215 / 12
 
 
+def share(amount: float, rate: float) -> float:
+    """rate x amount, calculated in decimal on whole cents; a half-cent goes to the even cent.
+
+    Binary floating point cannot be trusted on a half-cent: 25% of 597 023.50 is 149 255.875, and
+    whether that came out as .87 or .88 would depend on the order in which the sums were taken.
+    """
+    cents = Decimal(str(round(float(amount), 2)))
+    return float((cents * Decimal(str(rate))).quantize(Decimal("0.01"), rounding=ROUND_HALF_EVEN))
+
+
 def indirect_costs(direct: dict, programme) -> float:
     """Flat-rate indirect costs on the direct costs that form the base (AGA Art. 6.2.E)."""
-    base = sum(v for k, v in direct.items() if k not in programme.indirect_base_excludes)
-    return round(base * programme.indirect_rate, 2)
+    base = sum(round(float(v), 2) for k, v in direct.items() if k not in programme.indirect_base_excludes)
+    return share(base, programme.indirect_rate)
 
 
 def financial_statement(personnel: pd.DataFrame, lines: pd.DataFrame, project: dict, programme,
@@ -50,7 +64,7 @@ def financial_statement(personnel: pd.DataFrame, lines: pd.DataFrame, project: d
     p_end = pd.Timestamp(period["end"])
     months_total = (end.year - start.year) * 12 + end.month - start.month + 1
     months_done = (p_end.year - start.year) * 12 + p_end.month - start.month + 1
-    contribution = round(total["eligible_eur"] * project["funding_rate"], 2)
+    contribution = share(total["eligible_eur"], project["funding_rate"])
     summary = {
         "declared_eur": total["declared_eur"], "eligible_eur": total["eligible_eur"],
         "ineligible_eur": total["ineligible_eur"], "at_risk_eur": total["at_risk_eur"],
@@ -60,8 +74,6 @@ def financial_statement(personnel: pd.DataFrame, lines: pd.DataFrame, project: d
         "budget_eur": total["budget_eur"], "time_elapsed_pct": round(100 * months_done / months_total, 1),
         "months_done": months_done, "months_total": months_total,
         "cfs_threshold_eur": programme.cfs_threshold_eur,
-        # the CFS threshold counts the contribution requested for actual costs: not flat-rate indirect costs
-        "requested_for_actual_costs_eur": round((total["eligible_eur"] - e_eligible) * project["funding_rate"], 2),
     }
     return st, summary
 

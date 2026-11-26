@@ -1,11 +1,11 @@
-staff_id,role,contract,annual_cost_2025,annual_cost_2026,exclusive,other_eu_grant_days_2025,other_eu_grant_days_2026
-S01,Full professor (principal investigator),employee,118000,120400,False,0,0
-S02,Associate professor,employee,92000,93800,False,0,0
-S03,Researcher (tenure track),employee,68000,69400,False,0,0
-S04,Postdoctoral researcher,direct contract,31000,31600,True,0,0
-S05,Postdoctoral researcher,direct contract,31000,31600,True,0,0
-S06,Laboratory technician,employee,47000,47900,False,0,0
-S07,Project manager,employee,44000,44900,False,0,0
-S08,Research engineer (fixed term),employee,51000,52000,False,0,0
-S09,Researcher,employee,66000,67300,False,70,30
-S10,Postdoctoral researcher (from Jul 2025),direct contract,31000,31600,False,0,0
+staff_id,role,contract,cost_2025,months_2025,cost_2026,months_2026,other_eu_grant_days_2025,other_eu_grant_days_2026
+S01,Full professor (principal investigator),employee,118000,12,59000,6,0,0
+S02,Associate professor,employee,92000,12,46000,6,0,0
+S03,Researcher (tenure track),employee,68000,12,34000,6,0,0
+S04,Postdoctoral researcher,direct contract,31000,12,15500,6,0,0
+S05,Postdoctoral researcher,direct contract,31000,12,15500,6,0,0
+S06,Laboratory technician,employee,47000,12,23500,6,0,0
+S07,Project manager,employee,44000,12,22000,6,0,0
+S08,Research engineer (fixed term),employee,51000,12,25500,6,0,0
+S09,Researcher,employee,66000,12,33000,6,70,30
+S10,Postdoctoral researcher (from Jul 2025),direct contract,15500,6,15500,6,0,0

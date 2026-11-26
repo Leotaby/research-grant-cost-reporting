@@ -14,12 +14,14 @@ justified and in line with sound financial management.
 ## 2. Personnel
 
 - Cost = daily rate × days worked on the action, rounded to the nearest half-day.
-- Daily rate = annual personnel costs / 215.
-- **No more than 215 days a year per person across all EU grants**: check the days already
-  declared on other EU projects before reporting.
-- If the financial year is not closed yet, use the daily rate of the last closed year.
-- **Every month**: a timesheet (or, for people working only on the action, a monthly
-  day-declaration) **signed by the person and the supervisor**. Unsigned days cannot be declared.
+- Daily rate = personnel costs of the months within the reporting period ÷ maximum declarable days
+  for those months (215 ÷ 12 for each month, pro rata for part-time). For a full year of full-time
+  work: annual personnel costs ÷ 215.
+- No more days than that maximum, and **no more than 215 days a year per person across all EU
+  grants**: check the days already declared on other EU projects before reporting.
+- **Every month**: a declaration of the days worked on the action, **signed by the person and the
+  supervisor**, or a reliable time-recording system (timesheets). Days without these records cannot
+  be declared.
 - Suggested deadline: last month's records signed by the 5th of the following month.
 
 ## 3. Travel (C.1)
@@ -81,8 +83,9 @@ These are the standard time limits; the Data Sheet of the grant agreement sets t
 ## 10. Audit certificate, audits and records
 
 - Horizon Europe: a **certificate on the financial statements (CFS)** is needed if the EU
-  contribution the beneficiary requests for actual costs reaches **EUR 430 000** over the whole
-  project; flat-rate indirect costs do not count. It is submitted **only with the final report**.
+  contribution the beneficiary requests reaches **EUR 430 000** over the whole project. The whole
+  requested contribution counts, the flat rate for indirect costs included. It is submitted **only
+  with the final report**.
 - An independent external auditor issues it; a public body can use a competent and independent
   public officer. Budget the audit fee.
 - The granting authority can start checks and audits during the project and **up to 2 years after

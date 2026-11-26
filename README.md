@@ -78,10 +78,13 @@ Every finding is in `reports/RP1_issues_log.csv` with the line, the amount, the 
 
 ## Personnel costs
 
-Personnel costs are declared as daily rate × days worked, with daily rate = annual personnel costs
-/ 215, rounded to half-days. Nobody can declare more than 215 days a year across all EU grants, and
-every month needs a time record signed by the person and the supervisor. Days worked in 2026 are
-costed at the 2025 rate, because 2025 is the last closed financial year when the report is prepared.
+Personnel costs are declared as daily rate × days worked on the action, in half-days. The daily
+rate is the personnel cost of the months within the reporting period, divided by the maximum
+declarable days for those months: 215 ÷ 12 for each month (AGA Art. 6.2.A.1). For a full year that
+is the annual cost ÷ 215; for the six months of 2026 in this period it is the cost of those months
+÷ 107.5. Nobody can declare more than that maximum, nor more than 215 days a year across all EU
+grants. Time worked needs monthly declarations signed by the person and the supervisor, or a
+reliable time-recording system (MGA Art. 20).
 
 ![Days declared against the cap](reports/figures/fig3_days_against_cap.png)
 
@@ -130,11 +133,11 @@ running ahead in WP3, this is the point the technical report has to explain.
   in the Funding & Tenders Portal; the coordinator assembles the report and submits it.
   Deliverables and milestones are reported continuously.
 - **Audit certificate.** A certificate on the financial statements (CFS) comes with the final
-  report when the EU contribution requested for actual costs reaches EUR 430,000 over the whole
-  action; flat-rate indirect costs do not count (MGA Art. 24). An independent auditor issues it;
-  a public body can use a competent and independent public officer. The demo partner has requested
-  EUR 315,262 so far, 73% of the threshold, and at this pace reaches about EUR 840,000: the audit
-  fee belongs in the budget now.
+  report when the EU contribution a beneficiary requests reaches EUR 430,000 over the whole action.
+  In Horizon Europe the whole requested contribution counts, the 25% flat rate for indirect costs
+  included (MGA Art. 24, Data Sheet 4.3). An independent auditor issues it; a public body can use a
+  competent and independent public officer. The demo partner has requested EUR 389,890 so far, 91%
+  of the threshold, and at this pace passes EUR 1 million: the audit fee belongs in the budget now.
 - **After the balance.** Audits can start for 2 more years and records are kept for 5 years: in the
   demo, until May 2031 and May 2034 (MGA Art. 25 and 20).
 
@@ -152,7 +155,10 @@ The draft report (`reports/RP1_report.md`) turns all these figures into points f
 
 ## Run it
 
+Python 3.9 or newer.
+
 ```bash
+python3 -m venv .venv && source .venv/bin/activate   # optional: a clean environment
 pip install -r requirements.txt
 python -m grantcheck --period RP1                    # reports/ and reports/figures/
 python -m grantcheck --period RP1 --programme STANDARD --out reports_7pct   # same data, 7% flat rate
@@ -180,6 +186,8 @@ tests/       unit tests and the end-to-end test on the planted problems
   unit costs, lump sums or in-kind contributions), one ledger per reporting period.
 - The 215-day cap is checked on the days in the data plus the days the person declared on other EU
   grants; a real check needs every grant's time records for the same year.
+- The demo staff all work full time, and their pay did not change in the first half of 2026. The
+  working-time factor for part-time staff is in the code but not in the data.
 - National co-funding rules, and the Italian rules for cohesion-fund projects, are described in the
   docs but not applied by the code.
 
@@ -189,6 +197,8 @@ tests/       unit tests and the end-to-end test on the planted problems
   (EU Funding & Tenders Portal).
 - European Commission, *Horizon Europe: the rules of the game, the Model Grant Agreement*
   (presentation, March 2021).
+- European Commission, Common Audit Service (DG Research and Innovation), presentation on the
+  certificate on the financial statements in Horizon Europe, 26 June 2024.
 - Chips Joint Undertaking, *Annual activity report 2024*, "Chips for Europe Initiative calls":
   https://aar2024.chips-ju.europa.eu/annual-report/chips-for-europe-initiative-calls
 - CORDIS, SUPREME (grant agreement 101286304): https://cordis.europa.eu/project/id/101286304

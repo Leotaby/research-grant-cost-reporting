@@ -27,7 +27,7 @@ Month 18 of 48 (37.5% of the action);
 - **WP3 Cryogenic testing** has used 51.7 person-months against about 37.5 expected by now (52% of its plan): check that the remaining work fits the remaining effort.
 - **WP1 Project management** has 9.0 eligible person-months against about 15.0 expected by now: check whether time is being worked but not recorded.
 - **WP4 Dissemination and exploitation** has 4.8 eligible person-months against about 7.5 expected by now: check whether time is being worked but not recorded.
-- Audit certificate: EUR 315,262 of EU contribution requested for actual costs so far, 73% of the EUR 430,000 threshold. At this pace the total reaches about EUR 840,698, so a certificate on the financial statements (CFS) will be due with the final report: budget the audit fee now.
+- Audit certificate: EUR 389,890 of EU contribution requested so far, 91% of the EUR 430,000 threshold. At this pace the total reaches about EUR 1,039,706, so a certificate on the financial statements (CFS) will be due with the final report: budget the audit fee now.
 - Overdue at the report date: D3.2 First test results on demonstrator chips (60 days); MS3 Demonstrator chip tested at 10 mK (60 days). Explain the delay and the new date in the technical report.
 - 4 other items were submitted late (on average 15 days).
 - Personnel findings concern 4 people (S05, S08, S09, S10): fix the time records and the cap before the report is submitted.
@@ -111,7 +111,7 @@ Each report is due 60 days after its period ends; payment follows within
 | RP2 | 2026-07-01 | 2027-12-31 | Periodic report | 2028-02-29 | Interim payment | 2028-05-29 |
 | RP3 | 2028-01-01 | 2028-12-31 | Periodic and final report | 2029-03-01 | Payment of the balance | 2029-05-30 |
 
-- Certificate on the financial statements (CFS): due with the final report if the EU contribution requested for actual costs reaches EUR 430,000 over the whole action (flat-rate indirect costs do not count). So far: EUR 315,261.75 (73.3%); at this pace: about EUR 840,698.
+- Certificate on the financial statements (CFS): due with the final report if the EU contribution requested reaches EUR 430,000 over the whole action (the flat rate for indirect costs counts too). So far: EUR 389,889.69 (90.7%); at this pace: about EUR 1,039,706.
 - Audits by the granting authority can start until 2031-05-30
   (2 years after the balance, if it is paid by 2029-05-30).
 - Keep every supporting document until 2034-05-30 (5 years after the balance).

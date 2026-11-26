@@ -6,12 +6,15 @@ import matplotlib.ticker
 
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt  # noqa: E402
+from matplotlib import font_manager  # noqa: E402
 
 SURFACE, INK, INK2, MUTED = "#fcfcfb", "#0b0b0b", "#52514e", "#898781"
 GRID, BASE = "#e1e0d9", "#c3c2b7"
 BLUE, ORANGE, SAND, GREY = "#2a78d6", "#eb6834", "#f3c3a8", "#c9c7bf"
+# Inter where it is installed; otherwise the font that ships with matplotlib
+FONT = "Inter" if "Inter" in {f.name for f in font_manager.fontManager.ttflist} else "DejaVu Sans"
 plt.rcParams.update({
-    "font.family": ["Inter", "DejaVu Sans"], "font.size": 10,
+    "font.family": FONT, "font.size": 10,
     "figure.facecolor": SURFACE, "axes.facecolor": SURFACE, "axes.edgecolor": BASE,
     "axes.labelcolor": INK2, "text.color": INK, "xtick.color": MUTED, "ytick.color": MUTED,
 })

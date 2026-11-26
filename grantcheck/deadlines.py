@@ -6,8 +6,9 @@ Time limits of the EU grant agreement (standard values; the Data Sheet of each g
 - the granting authority pays within 90 days of receiving the report (MGA Art. 22);
 - the final report comes with the last periodic report, within 60 days after the end of the action;
 - a certificate on the financial statements (CFS) comes with the final report if the EU
-  contribution the beneficiary requests for actual costs over the whole action reaches the
-  threshold; flat-rate costs, such as indirect costs, do not count (MGA Art. 24);
+  contribution the beneficiary requests over the whole action reaches the threshold. In Horizon
+  Europe the whole requested contribution counts, the flat rate for indirect costs included
+  (MGA Art. 24 and Data Sheet 4.3);
 - records are kept for 5 years after the payment of the balance (MGA Art. 20), and the granting
   authority can start an audit up to 2 years after it (MGA Art. 25).
 """
@@ -51,7 +52,7 @@ def closing_dates(project: dict, programme) -> dict:
     }
 
 
-def cfs_status(requested_for_actual_costs_eur: float, programme, months_done: int, months_total: int):
+def cfs_status(requested_contribution_eur: float, programme, months_done: int, months_total: int):
     """Where the beneficiary stands against the CFS threshold, and where it is heading.
 
     The projection keeps the pace of the periods reported so far; it is a planning figure.
@@ -59,12 +60,12 @@ def cfs_status(requested_for_actual_costs_eur: float, programme, months_done: in
     threshold = programme.cfs_threshold_eur
     if not threshold:
         return None
-    projected = requested_for_actual_costs_eur / months_done * months_total
+    projected = requested_contribution_eur / months_done * months_total
     return {
         "threshold_eur": threshold,
-        "requested_so_far_eur": round(requested_for_actual_costs_eur, 2),
-        "share_of_threshold_pct": round(100 * requested_for_actual_costs_eur / threshold, 1),
+        "requested_so_far_eur": round(requested_contribution_eur, 2),
+        "share_of_threshold_pct": round(100 * requested_contribution_eur / threshold, 1),
         "projected_eur": round(projected, 2),
-        "reached": requested_for_actual_costs_eur >= threshold,
+        "reached": requested_contribution_eur >= threshold,
         "expected": projected >= threshold,
     }

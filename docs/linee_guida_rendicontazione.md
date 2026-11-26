@@ -19,14 +19,17 @@ Un costo reale è ammissibile solo se è:
 ## 2. Personale
 
 - Costo = tariffa giornaliera × giornate lavorate sul progetto, arrotondate alla mezza giornata.
-- Tariffa giornaliera = costo annuo del personale / 215.
-- Ogni persona può dichiarare al massimo **215 giornate l'anno sull'insieme delle sovvenzioni UE**:
-  prima di rendicontare, verificare le giornate già dichiarate su altri progetti europei.
-- Se l'esercizio non è ancora chiuso, si usa la tariffa dell'ultimo esercizio chiuso.
-- **Ogni mese** va compilato un timesheet (o, per chi lavora solo sul progetto, una dichiarazione
-  mensile delle giornate), **firmato dalla persona e dal responsabile scientifico**. Senza firma
-  quelle giornate non sono rendicontabili.
-- Scadenza consigliata: timesheet del mese firmati entro il giorno 5 del mese successivo.
+- Tariffa giornaliera = costo del personale nei mesi del periodo di rendicontazione ÷ giornate
+  massime dichiarabili per quei mesi (215 ÷ 12 per ogni mese, in proporzione per il part-time).
+  Per un anno intero a tempo pieno: costo annuo ÷ 215.
+- Non si possono dichiarare più giornate di quel massimo, né più di **215 giornate l'anno
+  sull'insieme delle sovvenzioni UE**: prima di rendicontare, verificare le giornate già dichiarate
+  su altri progetti europei.
+- **Ogni mese** va firmata una dichiarazione delle giornate lavorate sul progetto, **dalla persona
+  e dal responsabile**; in alternativa si usa un sistema affidabile di rilevazione delle presenze
+  (timesheet). Senza questi documenti le giornate non sono rendicontabili.
+- Scadenza consigliata: dichiarazioni o timesheet del mese firmati entro il giorno 5 del mese
+  successivo.
 
 ## 3. Missioni (C.1)
 
@@ -93,9 +96,9 @@ sovvenzione.
 ## 10. Certificato di audit, controlli e conservazione dei documenti
 
 - In Horizon Europe serve un **certificato di audit sui rendiconti (CFS)** se il contributo UE
-  richiesto dal beneficiario a rimborso di costi reali raggiunge **430.000 euro** sull'intero
-  progetto; i costi indiretti forfettari non si contano. Si presenta **solo con la relazione
-  finale**.
+  richiesto dal beneficiario raggiunge **430.000 euro** sull'intero progetto; nel calcolo rientra
+  tutto il contributo richiesto, compreso il forfait dei costi indiretti. Si presenta **solo con
+  la relazione finale**.
 - Lo rilascia un revisore esterno indipendente; per gli enti pubblici può rilasciarlo un
   funzionario pubblico competente e indipendente. Prevedere il costo dell'audit nel budget.
 - L'ente finanziatore può avviare controlli e audit durante il progetto e **fino a 2 anni dopo il

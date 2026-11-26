@@ -24,14 +24,20 @@ Checks R01 (period) and R05 (supporting documents) apply conditions 2 and 5 dire
 ## 2. Personnel costs (MGA Art. 6.2.A)
 
 - Cost = daily rate × day-equivalents worked on the action, rounded to the nearest half-day.
-- Daily rate = annual personnel costs for the person / 215.
-- The total day-equivalents declared in EU grants for a person and a year cannot exceed 215
-  (check R02). The tool adds the days the person declared on other EU grants.
-- If the financial year is not closed when the report is prepared, the daily rate of the last
-  closed financial year is used. In the demo, days worked in 2026 are costed at the 2025 rate.
-- Time worked must be supported by reliable time records (MGA Art. 20): monthly timesheets, or
-  monthly day-declarations for people working only on the action, signed by the person and the
-  supervisor (check R03).
+- Daily rate = actual personnel costs during the months within the reporting period ÷ maximum
+  declarable day-equivalents. The maximum is 215 ÷ 12 × the number of months within the reporting
+  period × the working-time factor, rounded to the nearest half-day (AGA, annotations to
+  Art. 6.2.A.1). For a full year of full-time work the rate comes to annual personnel costs ÷ 215.
+- The rate is calculated per person for the reporting period. It may be calculated separately for
+  each calendar year within the period if that is done consistently, which is what the tool does.
+- Two ceilings apply (check R02). A person cannot declare more day-equivalents than the maximum for
+  the period, because no more than 100% of the personnel costs can be declared. And the total
+  declared in EU grants for a person and a calendar year cannot exceed 215; the tool adds the days
+  the person declared on other EU grants.
+- Time worked must be supported by declarations signed monthly by the person and the supervisor,
+  unless a reliable time-recording system is in place (MGA Art. 20; check R03).
+- The rate of the "last closed financial year" belongs to a different option, average personnel
+  costs declared as unit costs. It does not apply to actual costs.
 
 ## 3. Purchase costs and subcontracting (MGA Art. 6.2.B and 6.2.C)
 
@@ -112,10 +118,11 @@ These are the standard time limits; the Data Sheet of each grant agreement sets 
 - **Final report:** submitted with the last periodic report, within 60 days after the end of the
   action; the payment of the balance follows.
 - **Certificate on the financial statements (CFS; Art. 24; Data Sheet 4.3):** in Horizon Europe
-  it is required when the EU contribution a beneficiary requests as reimbursement of actual costs
-  reaches EUR 430 000 over the whole action (EUR 725 000 for beneficiaries with an approved
-  systems and process audit). Flat-rate costs, such as indirect costs, do not count towards the
-  threshold. It is submitted only with the final report, or when a beneficiary's participation
+  it is required when the EU contribution a beneficiary requests reaches EUR 430 000 over the
+  whole action (EUR 725 000 for beneficiaries with an approved systems and process audit). The
+  whole requested contribution counts: unit costs, flat rates such as the 25% for indirect costs,
+  and lump sums are not examined in the certificate, but they are included in the threshold
+  calculation. It is submitted only with the final report, or when a beneficiary's participation
   ends, and it is issued by a qualified external auditor or, for public bodies, by a competent and
   independent public officer. Other programmes set the threshold in the Data Sheet.
 - **Records (Art. 20):** keep supporting documents for 5 years after the payment of the balance
@@ -145,5 +152,11 @@ beneficiary's position against the CFS threshold.
   (OSCARS, 14 March 2024): report due 60 days after the period ends, payment within 90 days, CFS
   only at final reporting, audits up to 2 years after the balance:
   https://indico.in2p3.fr/event/32021/sessions/20402/attachments/83288/123981/20240314-KoM-EC-Officer-OSCARS-EnricoPellizzari.pdf
+- European Commission, Common Audit Service (DG Research and Innovation), presentation on the
+  certificate on the financial statements in Horizon Europe, 26 June 2024: the threshold is
+  calculated on the total EU contribution requested, flat rates included:
+  https://www.gov.si/assets/ministrstva/MVZI/Znanost/Obzorje-Evropa/Pravna-in-financna-vprasanja/CFS-HE_2024.pdf
+- FFG, Austrian national contact point, "Certificate on the Financial Statements (CFS) in Horizon
+  Europe": https://ffg.at/en/europe/heu/legal-financial/cfs
 - Chips Joint Undertaking, *Annual activity report 2024*, "Chips for Europe Initiative calls":
   https://aar2024.chips-ju.europa.eu/annual-report/chips-for-europe-initiative-calls

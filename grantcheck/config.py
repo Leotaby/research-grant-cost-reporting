@@ -4,6 +4,8 @@ Only the parameters that differ between EU grant schemes live here. Sources: Eur
 "EU Grants: AGA - Annotated Grant Agreement", version 2.0 of 1 April 2025, and the Horizon Europe
 Model Grant Agreement (see docs/rules_reference.md).
 """
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 
@@ -13,7 +15,7 @@ class Programme:
     indirect_rate: float                    # flat rate for indirect costs (AGA Art. 6.2.E)
     indirect_base_excludes: tuple           # direct cost categories left out of the flat-rate base
     day_cap: int = 215                      # day-equivalents per person per year across EU grants
-    cfs_threshold_eur: float | None = None  # EU contribution requested for actual costs that requires a CFS
+    cfs_threshold_eur: float | None = None  # total EU contribution requested that requires a CFS
     report_days: int = 60                   # days after a reporting period ends to submit the report
     payment_days: int = 90                  # days the granting authority has to pay after the report
     record_years: int = 5                   # years to keep records after the payment of the balance
@@ -44,7 +46,7 @@ CATEGORY_NAMES = {
 RULES = {
     "R01": ("Cost incurred outside the action duration", "AGA Art. 6.1(a)(ii)",
             "Remove from the claim and charge it to the department's own funds."),
-    "R02": ("Days above the yearly cap of 215 day-equivalents across EU grants", "AGA Art. 6.2.A",
+    "R02": ("Days above the maximum that can be declared: 215 a year across EU grants", "AGA Art. 6.2.A",
             "Declare at most the remaining days; check the days declared on the person's other EU grants."),
     "R03": ("Time not supported by signed monthly time records", "AGA Art. 6.1(a)(v); MGA Art. 20",
             "Collect the signed records; if they cannot be produced, remove the cost."),
